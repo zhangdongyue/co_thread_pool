@@ -38,7 +38,7 @@ co_thread_pool_t* co_thread_pool_init(co_thread_pool_conf_t *conf)
 		pool->_tasks._cur_task_num 	= 0;
 
 		task_queue_init(&pool->_tasks);
-	
+
 		if (thread_key_create() != 0){/* create pthread_key_t,access global variable */
 			free(pool);
 			break;
